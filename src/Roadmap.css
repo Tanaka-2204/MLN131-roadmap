@@ -102,16 +102,25 @@ html, body {
 .label-number { font-size: 13px; color: #00c3ff; font-weight: bold; text-transform: uppercase; }
 .label-text { font-size: 15px; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
 
-/* 7. POPUP */
+/* 7. POPUP (ĐÃ PHÓNG TO & HIỂN THỊ FULL ẢNH) */
 .popup-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.75); display: flex; justify-content: center; align-items: center; z-index: 99999; backdrop-filter: blur(5px); margin: 0; padding: 0; }
-.popup-content { background-color: #fff; width: 90%; max-width: 550px; border-radius: 12px; padding: 25px 30px; position: relative; box-shadow: 0 15px 30px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; border-top: 6px solid #00c3ff; display: flex; flex-direction: column; }
+
+/* Tăng max-width từ 550px lên 850px để khung to gấp rưỡi. 
+   Thêm max-height và overflow-y để nếu nội dung quá dài thì có thể cuộn chuột, không bị tràn màn hình */
+.popup-content { background-color: #fff; width: 90%; max-width: 850px; max-height: 90vh; overflow-y: auto; border-radius: 12px; padding: 30px 40px; position: relative; box-shadow: 0 15px 30px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; border-top: 6px solid #00c3ff; display: flex; flex-direction: column; }
+
 .popup-close-btn { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 30px; color: #888; cursor: pointer; transition: color 0.2s; line-height: 1; }
 .popup-close-btn:hover { color: #00c3ff; }
 .popup-header { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-.popup-title { color: #00c3ff; font-size: 22px; margin: 0; display: flex; align-items: center; gap: 10px; }
-.popup-body { display: flex; flex-direction: column; gap: 15px; }
-.popup-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.popup-title { color: #00c3ff; font-size: 24px; margin: 0; display: flex; align-items: center; gap: 10px; }
+.popup-body { display: flex; flex-direction: column; gap: 20px; }
+
+/* SỬA LỖI ẢNH: Bỏ height 200px, dùng object-fit: contain để ảnh giữ đúng tỷ lệ thực, không bị cắt xén */
+.popup-image { width: 100%; max-height: 400px; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #f5f5f5; }
+
+/* Phóng to nhẹ size chữ cho dễ đọc trên máy chiếu */
 .popup-list { margin: 0; padding-left: 24px; text-align: left; }
-.popup-list li { font-size: 15.5px; line-height: 1.6; color: #333; margin-bottom: 10px; }
+.popup-list li { font-size: 16.5px; line-height: 1.6; color: #333; margin-bottom: 12px; }
 .popup-list li strong { color: #00c3ff; }
+
 @keyframes zoomIn { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
