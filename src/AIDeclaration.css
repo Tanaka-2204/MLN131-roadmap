@@ -1,0 +1,64 @@
+/* CONTAINER TRANG AI */
+.ai-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+}
+
+/* THẺ CARD PHÁT SÁNG */
+.ai-card {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 195, 255, 0.3);
+  border-top: 5px solid #00c3ff;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 195, 255, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ai-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
+.ai-icon { font-size: 40px; }
+.ai-title { color: #00c3ff; font-size: 28px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+
+.ai-section { margin-bottom: 25px; text-align: left; }
+.ai-heading { color: #fff; font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.ai-section p { color: #cbd5e1; font-size: 16px; line-height: 1.7; margin: 0; padding-left: 15px; border-left: 3px solid rgba(0, 195, 255, 0.5); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* =========================================
+   STYLE CHO THANH MENU CHUYỂN TRANG
+========================================= */
+.top-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(0, 195, 255, 0.2);
+}
+
+.nav-button {
+  background: transparent;
+  border: 2px solid #334155;
+  color: #94a3b8;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-button:hover { border-color: #00c3ff; color: #fff; }
+.nav-button.active { background: #00c3ff; color: #000; border-color: #00c3ff; box-shadow: 0 0 15px rgba(0, 195, 255, 0.5); }

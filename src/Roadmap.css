@@ -24,19 +24,13 @@ html, body {
 
 /* 2. CONTAINER CHÍNH */
 .roadmap-container {
-  padding: 50px 0 100px 0; /* Đã xóa padding 2 bên để không bị ép vào trong */
+  padding: 10px 0 100px 0; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  /* Background Tòa nhà Quốc hội */
-  background-image: 
-    linear-gradient(rgba(10, 15, 26, 0.85), rgba(10, 15, 26, 0.95)), 
-    url('https://namphucons.vn/wp-content/uploads/2021/12/203336435_4227455387324097_6645653143114508172_n.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: transparent; /* QUAN TRỌNG: Làm trong suốt */
 }
 
 /* 3. KHU VỰC TIÊU ĐỀ */
